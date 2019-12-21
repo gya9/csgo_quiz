@@ -14,16 +14,16 @@ def count_word(text):
 @app.route('/', methods=['POST', 'GET'])
 def home():
  
-#     total = ''
+    total = ''
  
-#     if request.method == 'POST':
-#         text = request.form['text']
-#         total = count_word(text)
+    if request.method == 'POST':
+        text = request.form['text']
+        total = count_word(text)
  
-#         return render_template('main.html', total=total, sentence=text)
- 
-    return True
+        return render_template('main.html', total=total, sentence=text)
+    
+    return render_template('main.html', total=total)
  
  
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(debug=True)
