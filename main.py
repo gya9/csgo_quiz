@@ -17,7 +17,7 @@ def search_player(text):
 @app.route('/', methods=['POST', 'GET'])
 def home():
  
-    total = ''
+    search_result = ''
  
     if request.method == 'POST':
         text = request.form['text']
